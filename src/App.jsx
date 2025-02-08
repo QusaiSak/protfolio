@@ -1,10 +1,14 @@
-import React from 'react'
+import Hero from './components/Hero'
+import About from './components/About'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <div>
-      <h1 className='font-circular-web font-extrabold'>Hi</h1>
-    </div>
+    <main className='relative min-h-screen w-screen overflow-x-hidden'>
+      <Navbar/>
+      <Hero/>
+      <About/>
+    </main>
   )
 }
 
