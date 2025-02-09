@@ -2,6 +2,10 @@
 
 @import "tailwindcss";
 
+html {
+  @apply scroll-smooth;
+}
+
 @theme {
   --font-zentry: zentry, sans-serif;
   --font-general: general, sans-serif;

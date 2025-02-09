@@ -6,9 +6,42 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SiCodechef, SiLeetcode } from "react-icons/si";
 import { TiLocationArrow } from "react-icons/ti";
 import Button from "./Button";
+import VideoPreview from "./VideoPreview";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const socialLinks = [
+  {
+    href: "https://www.linkedin.com/in/qusaisakerwala/",
+    icon: (
+      <FaLinkedin className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+    ),
+  },
+  {
+    href: "https://www.instagram.com/qusai_754/",
+    icon: (
+      <FaInstagram className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+    ),
+  },
+  {
+    href: "https://github.com/QusaiSak",
+    icon: (
+      <FaGithub className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+    ),
+  },
+  {
+    href: "https://leetcode.com/u/QusaiCodes/",
+    icon: (
+      <SiLeetcode className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+    ),
+  },
+  {
+    href: "https://www.codechef.com/users/qusai_codes",
+    icon: (
+      <SiCodechef className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+    ),
+  },
+];
 const Hero = () => {
   const [currI, setCurrI] = useState(1);
   const [hasC, setHasC] = useState(false);
@@ -73,7 +106,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="relative h-dvh w-screen overflow-x-hidden">
+    <div className="relative h-dvh w-screen overflow-x-hidden" id="home">
       {isLoading && (
         <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
           <div className="three-body">
@@ -88,19 +121,22 @@ const Hero = () => {
         className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75">
         <div>
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
-            <div
-              className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
-              onClick={handleminvidclick}>
-              <video
-                ref={nextVdref}
-                src={getVdsrc((currI % totalVid) + 1)}
-                loop
-                muted
-                id="current-video"
-                className="size-64 origin-center scale-150 object-cover object-center"
-                onLoadedData={handleVdLoad}
-              />
-            </div>
+            <VideoPreview>
+              <div
+                className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
+                onClick={handleminvidclick}>
+                <video
+                  ref={nextVdref}
+                  src={getVdsrc((currI % totalVid) + 1)}
+                  loop
+                  muted
+                  autoPlay
+                  id="current-video"
+                  className="size-64 origin-center scale-150 object-cover object-center"
+                  onLoadedData={handleVdLoad}
+                />
+              </div>
+            </VideoPreview>
           </div>
           <video
             ref={nextVdref}
@@ -135,36 +171,15 @@ const Hero = () => {
               Mumbai, India
             </p>
             <div className="flex gap-x-4">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer">
-                <FaLinkedin className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer">
-                <FaGithub className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer">
-                <FaInstagram className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
-              </a>
-              <a
-                href="https://leetcode.com"
-                target="_blank"
-                rel="noopener noreferrer">
-                <SiLeetcode className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
-              </a>
-              <a
-                href="https://www.codechef.com"
-                target="_blank"
-                rel="noopener noreferrer">
-                <SiCodechef className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
-              </a>
+              {socialLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  {link.icon}
+                </a>
+              ))}
             </div>
             <Button
               id="watch-trailer"

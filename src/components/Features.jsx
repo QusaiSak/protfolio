@@ -145,7 +145,7 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 };
 
 const Features = () => (
-  <section className="bg-black pb-52">
+  <section className="bg-black pb-52" id="technical">
     <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32 flex flex-col items-center">
         <AnimatedTitle
