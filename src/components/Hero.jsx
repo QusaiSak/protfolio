@@ -2,6 +2,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef, useState } from "react";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { SiCodechef, SiLeetcode } from "react-icons/si";
 import { TiLocationArrow } from "react-icons/ti";
 import Button from "./Button";
 
@@ -120,27 +122,61 @@ const Hero = () => {
         </div>
         <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
           {" "}
-          G<b>a</b>ming
+          N<b>E</b>XT
         </h1>
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-25 px-5 md:px-10">
-            <h1 className="special-font hero-heading text-blue-100">
-              redifi<b>n</b>e
+            <h1 className="text-4xl md:text-8xl font-bold font-zentry text-blue-100 mb-4">
+              Hi, I'm <span className="text-yellow-300">Qusai Sakerwala</span>
             </h1>
-            <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              Enter the Metagame layer <br /> Unleash the Play Economy
+            <p className="text-lg md:text-xl text-blue-100 mb-6">
+              Third-Year Student at KJ Somaiya College of Engineering
+              <br />
+              Mumbai, India
             </p>
+            <div className="flex gap-x-4">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                <FaLinkedin className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+              </a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                <FaGithub className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                <FaInstagram className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+              </a>
+              <a
+                href="https://leetcode.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                <SiLeetcode className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+              </a>
+              <a
+                href="https://www.codechef.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                <SiCodechef className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+              </a>
+            </div>
             <Button
               id="watch-trailer"
-              title="Watch Tailer"
+              title="Resume"
               leftIcon={<TiLocationArrow />}
-              containerClass="!bg-yellow-300 flex-center gap-1"
+              containerClass="!bg-yellow-300 flex-center gap-1 mt-5"
             />
           </div>
         </div>
       </div>
       <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
-        G<b>A</b>MING
+        N<b>E</b>XT
       </h1>
     </div>
   );

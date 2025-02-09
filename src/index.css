@@ -74,6 +74,13 @@
   @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem];
 }
 
+@utility subhero-heading {
+  @apply uppercase font-zentry font-black text-2xl sm:right-10 sm:text-3xl md:text-5xl lg:text-[9rem];
+}
+@utility subihero-heading {
+  @apply uppercase font-zentry font-black text-xl sm:right-10 sm:text-2xl md:text-4xl lg:text-[7rem];
+}
+
 @utility about-subtext {
   @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem];
 }
@@ -307,4 +314,34 @@
     transform: translateY(66%) scale(0.65);
     opacity: 0.8;
   }
+}
+
+/* Optimize transitions */
+.initial-content {
+  opacity: 1;
+  transform: translateY(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.about-content {
+  opacity: 0;
+  transform: translateY(20px);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%); /* Scroll halfway to loop */
+  }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
 }
