@@ -2,13 +2,7 @@ import { TiLocationArrow } from "react-icons/ti";
 import AnimatedTitle from "./Animated";
 
 export const BentoTilt = ({ children, className = "" }) => {
-  return (
-    <div
-      className={className}
-      >
-      {children}
-    </div>
-  );
+  return <div className={className}>{children}</div>;
 };
 
 // ... existing code ...
@@ -102,7 +96,7 @@ const Features = () => (
           <div className="relative size-full">
             <img
               src="img/b5.svg"
-              className="absolute left-1/2 top-10 transform -translate-x-1/2 md:left-32 md:translate-x-0 size-full object-center"
+              className="absolute top-5 left-20  md:left-32  size-full object-center"
             />
             <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
               <div>
@@ -130,7 +124,7 @@ const Features = () => (
           <div className="relative size-full">
             <img
               src="img/b4.svg"
-              className="absolute left-1/2 top-10 transform -translate-x-1/2 md:left-36 md:translate-x-0 size-full object-cover object-center"
+              className="absolute top-10 left-36 size-full object-cover object-center"
             />
             <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
               <div>

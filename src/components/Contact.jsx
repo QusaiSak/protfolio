@@ -44,6 +44,12 @@ const Contact = () => {
             rel="noopener noreferrer">
             <Button title="contact me" containerClass="mt-10 cursor-pointer" />
           </a>
+          <a
+            href="mailto:qusaisakerwala@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer">
+            or <span className="underline">qusaisakerwala@gmail.com</span>
+          </a>
         </div>
       </div>
     </div>

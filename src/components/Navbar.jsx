@@ -31,13 +31,10 @@ const Navbar = () => {
   useEffect(() => {
     if (currentScrollY === 0) {
       setIsNavVisible(true);
-      navRef.current.classList.remove("floating-nav");
     } else if (currentScrollY > lastScrollY) {
       setIsNavVisible(false);
-      navRef.current.classList.add("floating-nav");
     } else if (currentScrollY < lastScrollY) {
       setIsNavVisible(true);
-      navRef.current.classList.add("floating-nav");
     }
     setLastScrollY(currentScrollY);
   }, [currentScrollY, lastScrollY]);

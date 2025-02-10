@@ -8,7 +8,7 @@ const projects = [
       "A matrix theme personal portfolio showcasing projects, skills, and contact information with a modern UI.",
     image: "/img/project1.png",
     link: "https://marknoxproj.vercel.app/",
-    icon: ["img/next.svg", "img/tail.svg"],
+    icon: ["img/next.svg", "img/ts.svg", "img/tail.svg"],
     live: true,
   },
   {
@@ -23,7 +23,7 @@ const projects = [
   {
     title: "Iotian",
     description:
-      "An ecommerce website focused on selling tech devices, integrating smart device control with real-time monitoring features.",
+      "An ecommerce website focused on selling tech devices, integrating animation for a better UX.",
     image: "/img/project3.png",
     icon: ["img/re.svg", "img/tail.svg"],
     link: "https://github.com/Karannisar/ioreact",
@@ -51,12 +51,12 @@ const projects = [
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bento-tilt_2 border-hsla mr-4">
+    <div className="bento-tilt_2 border-hsla mr-4 md:scale-100 md:hover:scale-105">
       <div className="relative">
         <img
           src={project.image || "/placeholder.svg"}
           alt={project.title}
-          className="object-cover"
+          className="h-60 w-full"
         />
       </div>
       <div className="p-6">
