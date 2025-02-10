@@ -181,12 +181,17 @@ const Hero = () => {
                 </a>
               ))}
             </div>
-            <Button
-              id="watch-trailer"
-              title="Resume"
-              leftIcon={<TiLocationArrow />}
-              containerClass="!bg-yellow-300 flex-center gap-1 mt-5"
-            />
+            <a
+              href="/Qusai_Sakerwala.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              <Button
+                id="watch-trailer"
+                title="Resume"
+                leftIcon={<TiLocationArrow />}
+                containerClass="!bg-yellow-300 flex-center gap-1 mt-5"
+              />
+            </a>
           </div>
         </div>
       </div>

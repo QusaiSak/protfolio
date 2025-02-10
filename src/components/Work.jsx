@@ -14,7 +14,7 @@ const workExperience = [
 
 const WorkCard = ({ project }) => {
   return (
-    <div className="bento-tilt_2 border-hsla mx-auto">
+    <div className="bento-tilt_2 mx-auto">
       <div className="p-6 flex flex-col items-center justify-center">
         <img
           src={project.thumbnail || "/placeholder.svg"}
@@ -42,7 +42,7 @@ const Work = () => {
   return (
     <section
       className="min-h-screen w-full text-white  px-4 md:px-8 flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: 'url("img/gallery-2.webp")' }}>
+      style={{ backgroundImage: 'url("img/gallery-2.webp")' }} id="work">
       <div className="text-center  bg-opacity-60 p-8 rounded-xl">
         <AnimatedTitle
           title="<b> Work Experience</b>"

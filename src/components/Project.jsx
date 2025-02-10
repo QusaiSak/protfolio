@@ -8,42 +8,51 @@ const projects = [
       "A matrix theme personal portfolio showcasing projects, skills, and contact information with a modern UI.",
     image: "/img/project1.png",
     link: "https://marknoxproj.vercel.app/",
-    Live: true,
+    icon: ["img/next.svg", "img/tail.svg"],
+    live: true,
   },
   {
     title: "Vision Capital",
     description:
       "A financial dashboard for tracking investments, providing real-time data visualization and analytics.",
     image: "/img/project2.png",
+    icon: ["img/re.svg", "img/tail.svg", "img/nodejs.svg"],
     link: "https://github.com/QusaiSak/VisionCapital",
+    live: false,
   },
   {
     title: "Iotian",
     description:
-      "An ecommerce website focused on selling tech devices project focusing on smart device integration with real-time monitoring and control features.",
+      "An ecommerce website focused on selling tech devices, integrating smart device control with real-time monitoring features.",
     image: "/img/project3.png",
+    icon: ["img/re.svg", "img/tail.svg"],
     link: "https://github.com/Karannisar/ioreact",
+    live: false,
   },
   {
     title: "Kaios",
     description:
-      "A weather application designed with a modern UI which helps my team secure 3rd place in a Frontend Hackathon.",
+      "A weather application designed with a modern UI which helped my team secure 3rd place in a Frontend Hackathon.",
     image: "/img/project4.png",
+    icon: ["img/re.svg", "img/tail.svg"],
     link: "https://github.com/QusaiSak/WeatherGreek",
+    live: false,
   },
   {
     title: "Coin Search",
     description:
       "A cryptocurrency tracker that provides market trends, price updates, and detailed coin information.",
     image: "/img/project5.png",
+    icon: ["img/re.svg", "img/tail.svg"],
     link: "https://github.com/QusaiSak/Crypto-React",
+    live: false,
   },
 ];
 
 const ProjectCard = ({ project }) => {
   return (
     <div className="bento-tilt_2 border-hsla mr-4">
-      <div className="relative ">
+      <div className="relative">
         <img
           src={project.image || "/placeholder.svg"}
           alt={project.title}
@@ -57,16 +66,33 @@ const ProjectCard = ({ project }) => {
         <p className="text-sm md:text-base text-gray-300 mb-4">
           {project.description}
         </p>
-        <a
-          href={project.link}
-          className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200">
-          {project.Live ? (
-            <span className="mr-2">Check Live Site</span>
-          ) : (
-            <span className="mr-2">Github Link</span>
-          )}
-          <FaLocationArrow />
-        </a>
+        <div className="flex items-center justify-between mt-7 mb-3">
+          <div className="flex items-center">
+            {project.icon.map((icon, index) => (
+              <div
+                key={index}
+                className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                style={{
+                  transform: `translateX(-${5 * index + 2}px)`,
+                }}>
+                <img src={icon} alt={`icon-${index}`} className="p-2" />
+              </div>
+            ))}
+          </div>
+
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200">
+            {project.live ? (
+              <span className="mr-2">Check Live Site</span>
+            ) : (
+              <span className="mr-2">Github Link</span>
+            )}
+            <FaLocationArrow />
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -74,7 +100,9 @@ const ProjectCard = ({ project }) => {
 
 const ProjectShowcase = () => {
   return (
-    <section className="min-h-screen w-full bg-black text-white py-16 px-4 md:px-8">
+    <section
+      className="min-h-screen w-full bg-black text-white py-16 px-4 md:px-8"
+      id="project">
       <div className="max-w-8xl mx-auto">
         <div className="text-center mb-12">
           <AnimatedTitle
