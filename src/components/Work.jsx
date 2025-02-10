@@ -28,6 +28,8 @@ const WorkCard = ({ project }) => {
           {project.desc}
         </p>
         <a
+          target="_blank"
+          rel="noopener noreferrer"
           href={project.link}
           className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200">
           <span className="mr-2">Github Link</span>
@@ -42,7 +44,8 @@ const Work = () => {
   return (
     <section
       className="min-h-screen w-full text-white  px-4 md:px-8 flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: 'url("img/gallery-2.webp")' }} id="work">
+      style={{ backgroundImage: 'url("img/gallery-2.webp")' }}
+      id="work">
       <div className="text-center  bg-opacity-60 p-8 rounded-xl">
         <AnimatedTitle
           title="<b> Work Experience</b>"
