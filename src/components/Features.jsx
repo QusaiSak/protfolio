@@ -80,7 +80,7 @@ export const BentoCard = ({ src, title, description }) => {
 };
 
 const Features = () => (
-  <section className="bg-black pb-52" id="technical">
+  <section className="bg-black pb-52 overflow-hidden" id="technical">
     <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32 flex flex-col items-center">
         <AnimatedTitle
@@ -95,7 +95,7 @@ const Features = () => (
       </div>
 
       <div className="grid w-full gap-7 grid-cols-1 md:grid-cols-2 md:grid-rows-3 h-auto md:h-[135vh] ">
-        <BentoTilt className="bento-tilt_2">
+        <BentoTilt className="bento-tilt_1 md:bento-tilt_2">
           <TechStackCard />
         </BentoTilt>
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1">
@@ -144,7 +144,7 @@ const Features = () => (
             </div>
           </div>
         </BentoTilt>
-        <BentoTilt className="bento-tilt_2">
+        <BentoTilt className="bento-tilt_1 md:bento-tilt_2">
           <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
             <h1 className="bento-title special-font text-black">
               Do you w<b>a</b>nt to st<b>a</b>rt <b>a</b> proj<b>e</b>ct tog

@@ -163,7 +163,8 @@ const Hero = () => {
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-25 px-5 md:px-10">
             <h1 className="text-4xl md:text-8xl font-bold font-zentry text-blue-100 mb-4">
-              Hi, I'm <span className="text-yellow-300">Qusai Sakerwala</span>
+              Hi, I{"'"}m{" "}
+              <span className="text-yellow-300">Qusai Sakerwala</span>
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-6">
               Third-Year Student at KJ Somaiya College of Engineering

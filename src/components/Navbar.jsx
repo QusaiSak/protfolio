@@ -89,7 +89,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center">
               {/* Desktop Nav Items */}
-              <div className="hidden md:flex gap-4">
+              <div className="hidden md:flex ">
                 {navItems.map((item, index) => (
                   <a
                     key={index}

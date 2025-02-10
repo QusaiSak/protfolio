@@ -47,9 +47,9 @@ const About = () => {
   return (
     <div id="about" className="min-h-screen w-screen overflow-hidden">
       <div className="initial-content relative mb-6 mt-20 md:mt-36 flex flex-col items-center gap-3 md:gap-5 will-change-transform">
-        <p className="font-general text-xs md:text-sm uppercase">About Me</p>
+        <p className="font-general text-md md:text-xl uppercase">About Me</p>
         <AnimatedTitle
-          title="Fronte<b>n</b>d<br />develo<b>per</b>"
+          title="<b>Web</b><br />develo<b>per</b>"
           containerClass="mt-5 !text-black text-center"
         />
       </div>
@@ -59,7 +59,7 @@ const About = () => {
           <img
             src="/img/about.webp"
             alt="about"
-            className="absolute left-0 top-0 w-full h-full object-cover"
+            className="absolute left-0 top-0 size-full object-cover"
             loading="eager"
           />
 
@@ -70,7 +70,8 @@ const About = () => {
                   About Me
                 </p>
                 <h1 className="special-font subhero-heading text-blue-100 ">
-                  Fronte<b>n</b>d<br />
+                  <b>Web</b>
+                  <br />
                   develo<b>per</b>
                 </h1>
                 <p className="font-general text-md md:text-xl uppercase text-white mt-2">
