@@ -32,7 +32,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} All rights reserved.
         </p>
 
-        <div className="flex justify-center gap-4 md:justify-start">
+        <div className="flex justify-center gap-4 md:justify-end">
           {socialLinks.map((link, index) => (
             <a
               key={index}
