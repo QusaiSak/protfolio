@@ -4,8 +4,6 @@ import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SiCodechef, SiLeetcode } from "react-icons/si";
-import { TiLocationArrow } from "react-icons/ti";
-import Button from "./Button";
 import VideoPreview from "./VideoPreview";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -14,31 +12,31 @@ const socialLinks = [
   {
     href: "https://www.linkedin.com/in/qusaisakerwala/",
     icon: (
-      <FaLinkedin className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+      <FaLinkedin className="text-blue-100 hover:text-yellow-300 md:text-2xl text-lg transition" />
     ),
   },
   {
     href: "https://www.instagram.com/qusai_754/",
     icon: (
-      <FaInstagram className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+      <FaInstagram className="text-blue-100 hover:text-yellow-300 md:text-2xl text-lg transition" />
     ),
   },
   {
     href: "https://github.com/QusaiSak",
     icon: (
-      <FaGithub className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+      <FaGithub className="text-blue-100 hover:text-yellow-300 md:text-2xl text-lg transition" />
     ),
   },
   {
     href: "https://leetcode.com/u/QusaiCodes/",
     icon: (
-      <SiLeetcode className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+      <SiLeetcode className="text-blue-100 hover:text-yellow-300 md:text-2xl text-lg transition" />
     ),
   },
   {
     href: "https://www.codechef.com/users/qusai_codes",
     icon: (
-      <SiCodechef className="text-blue-100 hover:text-yellow-300 text-2xl transition" />
+      <SiCodechef className="text-blue-100 hover:text-yellow-300 md:text-2xl text-lg transition" />
     ),
   },
 ];
@@ -132,7 +130,7 @@ const Hero = () => {
                   muted
                   autoPlay
                   id="current-video"
-                  className="size-64 origin-center scale-150 object-cover object-center"
+                  className="size-64 origin-center scale-150 object-cover object-center hidden md:block"
                   onLoadedData={handleVdLoad}
                 />
               </div>
@@ -166,12 +164,7 @@ const Hero = () => {
               Hi, I{"'"}m{" "}
               <span className="text-yellow-300">Qusai Sakerwala</span>
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-6">
-              Third-Year Student at KJ Somaiya College of Engineering
-              <br />
-              Mumbai, India
-            </p>
-            <div className="flex gap-x-4">
+            <div className="flex gap-x-4 my-2">
               {socialLinks.map((link, index) => (
                 <a
                   key={index}
@@ -182,17 +175,11 @@ const Hero = () => {
                 </a>
               ))}
             </div>
-            <a
-              href="/Qusai_Sakerwala.pdf"
-              target="_blank"
-              rel="noopener noreferrer">
-              <Button
-                id="watch-trailer"
-                title="Resume"
-                leftIcon={<TiLocationArrow />}
-                containerClass="!bg-yellow-300 flex-center gap-1 mt-5"
-              />
-            </a>
+            <p className="text-lg md:text-xl text-blue-100 mb-6">
+              Third-Year Student at KJ Somaiya College of Engineering
+              <br />
+              Mumbai, India
+            </p>
           </div>
         </div>
       </div>
