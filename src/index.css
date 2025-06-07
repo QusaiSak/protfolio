@@ -343,9 +343,11 @@ html {
 }
 
 .animate-scroll {
-  animation: scroll 10s linear infinite;
+  animation: scroll 20s linear infinite;
 }
-
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
 /* Custom Global Scrollbar Styles */
 
 /* For WebKit browsers (Chrome, Safari, Edge) */
@@ -380,4 +382,68 @@ html {
 * {
   scrollbar-width: thin; /* Makes scrollbar narrower */
   scrollbar-color: #007bff #f0f0f0; /* thumb color then track color */
+}
+
+/* Mouse Scroll Animation */
+.mouse-scroll-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mouse {
+  width: 26px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.wheel {
+  width: 3px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  animation: mouse-wheel 1.5s ease-in-out infinite;
+}
+
+@keyframes mouse-wheel {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+/* Grid Pattern Animation */
+@keyframes grid-fade {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.grid-pattern {
+  animation: grid-fade 4s ease-in-out infinite;
+}
+
+/* Hover Effects */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }

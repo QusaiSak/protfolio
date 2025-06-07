@@ -47,9 +47,9 @@ const About = () => {
   return (
     <div id="about" className="min-h-screen w-screen overflow-hidden">
       <div className="initial-content relative mb-6 mt-20 md:mt-36 flex flex-col items-center gap-3 md:gap-5 will-change-transform">
-        <p className="font-general text-md md:text-xl uppercase">About Me</p>
+        <p className="font-general text-md md:text-xl uppercase">Discover</p>
         <AnimatedTitle
-          title="<b>Web</b><br />develo<b>per</b>"
+          title="<b>Full-Stack</b><br />develo<b>per</b>"
           containerClass="mt-5 !text-black text-center"
         />
       </div>
@@ -57,7 +57,7 @@ const About = () => {
       <div className="h-screen md:h-dvh w-screen" id="clip">
         <div className="mask-clip-path about-image will-change-[transform,width,height]">
           <img
-            src="/img/about.webp"
+            src="/img/entrance.webp"
             alt="about"
             className="absolute left-0 top-0 size-full object-cover"
             loading="eager"
@@ -65,20 +65,20 @@ const About = () => {
 
           <div className="about-content absolute inset-0 opacity-0 translate-y-8 p-4 md:p-8 bg-black/50 will-change-transform overflow-y-auto">
             <div className="relative h-full flex flex-col md:flex-row items-center justify-between">
-              <div className="flex-1 mt-10 md:mt-32">
-                <p className="font-general text-md md:text-xl uppercase text-white">
-                  About Me
+              <div className="flex-1 mt-10 md:mt-32 max-w-2xl">
+                <p className="special-font text-xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mt-4">
+                  Who I Am
                 </p>
-                <h1 className="special-font subhero-heading text-blue-100 ">
-                  <b>Web</b>
+                <h1 className="special-font text-6xl md:text-9xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mt-4">
+                  <b>Full-Stack</b>
                   <br />
-                  develo<b>per</b>
+                  <b>developer</b>
                 </h1>
-                <p className="font-general text-md md:text-xl uppercase text-white mt-2">
-                  Creating seamless web experiences
+                <p className="font-general text-md md:text-xl uppercase text-gray-300 mt-2">
+                  Crafting digital experiences that matter
                 </p>
-                <p className="font-general text-md md:text- uppercase text-blue-50 mt-1">
-                  Specialized in React, Node.js, and modern web technologies
+                <p className="font-general text-sm md:text-base text-gray-300 mt-4 leading-relaxed">
+                  I transform ideas into exceptional digital solutions. With expertise in React, Node.js, and cutting-edge web technologies, I build scalable applications that blend innovative design with robust functionality. My passion lies in creating user-centric experiences that not only look stunning but perform flawlessly across all platforms.
                 </p>
               </div>
 

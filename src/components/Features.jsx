@@ -10,6 +10,7 @@ export const BentoTilt = ({ children, className = "" }) => {
 export const TechStackCard = () => {
   const techStack = [
     "ReactJS",
+    "AngularJS",
     "Express",
     "TypeScript",
     "Node.js",
@@ -36,10 +37,20 @@ export const TechStackCard = () => {
 
         <div className="overflow-hidden pr-2 md:pr-4">
           <div className="animate-scroll grid grid-cols-2 gap-2 md:gap-4">
-            {[...techStack, ...techStack].map((tech, index) => (
+            {[...techStack].map((tech, index) => (
               <div
-                key={index}
-                className="bg-[#1a1a3f]/80 px-2 py-1.5 md:px-3 md:py-2 backdrop-blur-sm border border-white/10 rounded-md shadow-lg hover:border-white/20 transition-all duration-300">
+                key={`first-${index}`}
+                className="bg-[#1a1a3f]/80 px-2 py-1.5 md:px-3 md:py-2 backdrop-blur-sm border border-white/10 rounded-md shadow-lg hover:border-white/20 transition-all duration-300 flex-shrink-0">
+                <span className="text-white/90 text-xs md:text-sm font-medium">
+                  {tech}
+                </span>
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {[...techStack].map((tech, index) => (
+              <div
+                key={`second-${index}`}
+                className="bg-[#1a1a3f]/80 px-2 py-1.5 md:px-3 md:py-2 backdrop-blur-sm border border-white/10 rounded-md shadow-lg hover:border-white/20 transition-all duration-300 flex-shrink-0">
                 <span className="text-white/90 text-xs md:text-sm font-medium">
                   {tech}
                 </span>

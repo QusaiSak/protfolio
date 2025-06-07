@@ -107,7 +107,7 @@ const ProjectShowcase = () => {
         <div className="text-center mb-12">
           <AnimatedTitle
             title="<b>My Projects</b>"
-            containerClass="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-400"
+            containerClass="text-3xl md:text-4xl lg:text-8xl font-bold "
           />
         </div>
 
